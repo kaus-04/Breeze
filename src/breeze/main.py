@@ -250,51 +250,51 @@ Commands in chat mode:
 def print_usage_examples():
     """Print comprehensive usage examples."""
     examples = """
-🌟 Breeze Usage Examples:
+ Breeze Usage Examples:
 
-📝 Documentation Generation:
+ Documentation Generation:
   breeze doc calculator.py                    # Python docstrings
   breeze doc utils.js --output new-file       # JavaScript JSDoc
   breeze doc MathUtils.java -v               # Java Javadoc with verbose output
 
-📊 Code Analysis:
+ Code Analysis:
   breeze summarize large_project.py           # Get code overview
   breeze inspect security_check.php           # Find security issues
   breeze inspect memory_manager.cpp --verbose # C++ memory analysis
 
-🧪 Test Generation:
+ Test Generation:
   breeze test api_client.py --output new-file # Generate pytest tests
   breeze test validator.js                    # Generate Jest tests
   breeze test calculator.java                 # Generate JUnit tests
 
-⚡ Code Improvement:
+ Code Improvement:
   breeze refactor legacy_code.py --secure     # Refactor with confirmation
   breeze annotate api.ts --output in-place    # Add TypeScript types
   breeze refactor old_script.js -v            # Modern JavaScript patterns
 
-🔄 Code Migration:
+ Code Migration:
   breeze migrate old_app.py --target "Python 3.12"
   breeze migrate jquery_code.js --target "React"
   breeze migrate legacy.java --target "Java 17"
   breeze migrate script.py --target "TypeScript" --output new-file
 
-💬 Interactive Mode:
+ Interactive Mode:
   breeze chat                                 # Start interactive session
   # In chat mode:
   # > analyze my_project.py for performance issues
   # > convert this Python code to JavaScript
   # > help me refactor this function
 
-🎯 Output Modes:
+ Output Modes:
   --output console     # Display results (default)
   --output in-place    # Modify original file  
   --output new-file    # Create new file
 
-🛡️ Safety Options:
+ Safety Options:
   --secure            # Ask for confirmation before changes
   --verbose           # Show detailed processing info
 
-📁 Supported File Types:
+ Supported File Types:
   Programming: .py .js .ts .java .cpp .c .cs .php .rb .go .rs .swift .kt
   Web:         .html .css .scss .sass .sql
   Data:        .json .xml .yaml .yml
@@ -307,9 +307,9 @@ def print_usage_examples():
 def print_chat_help() -> None:
     """Print comprehensive help for chat mode."""
     help_text = """
-💬 Breeze Interactive Chat Mode Help:
+ Breeze Interactive Chat Mode Help:
 
-🎯 Direct Commands:
+ Direct Commands:
   doc <file>                   - Generate documentation
   summarize <file>             - Create code summary  
   test <file>                  - Generate unit tests
@@ -318,7 +318,7 @@ def print_chat_help() -> None:
   annotate <file>              - Add type annotations
   migrate <file> --target X    - Migrate to target version/language
 
-🗣️ Natural Language Queries:
+ Natural Language Queries:
   "Analyze security issues in auth.py"
   "Generate tests for my calculator class"
   "Convert this Python code to JavaScript"
@@ -327,27 +327,27 @@ def print_chat_help() -> None:
   "Add TypeScript types to my API client"
   "Help me migrate from jQuery to React"
 
-🎛️ Chat Options:
+ Chat Options:
   help                         - Show this help message
   examples                     - Show usage examples
   supported                    - List supported file types
   exit, quit, q               - Exit chat mode
 
-💡 Tips:
+ Tips:
   • You can reference files by path: "doc src/utils.py"  
   • Ask questions about code: "What does this function do?"
   • Request explanations: "Explain this algorithm"
   • Get recommendations: "Best practices for this code?"
   • Multiple files: "Compare these two implementations"
 
-🌟 Example Chat Session:
+ Example Chat Session:
   breeze> doc calculator.py
   breeze> What security issues might this PHP code have?
   breeze> Convert my Python script to TypeScript
   breeze> help me optimize this SQL query
   breeze> exit
 
-🔧 For non-interactive usage, use: breeze <command> <file> [options]
+ For non-interactive usage, use: breeze <command> <file> [options]
 """
     print(help_text)
 
@@ -355,9 +355,9 @@ def print_chat_help() -> None:
 def print_supported_languages():
     """Print all supported programming languages and file types."""
     languages = """
-🌐 Breeze Supported Languages & File Types:
+ Breeze Supported Languages & File Types:
 
-💻 Programming Languages:
+ Programming Languages:
   • Python         (.py)      - Docstrings, pytest, type hints
   • JavaScript     (.js)      - JSDoc, Jest, modern ES features  
   • TypeScript     (.ts)      - TSDoc, type annotations, interfaces
@@ -373,31 +373,31 @@ def print_supported_languages():
   • Kotlin         (.kt)      - KDoc, JUnit integration
   • Scala          (.scala)   - ScalaDoc, ScalaTest
 
-🌐 Web Technologies:
+ Web Technologies:
   • HTML           (.html)    - Semantic markup, accessibility
   • CSS            (.css)     - Modern CSS, responsive design
   • SCSS/Sass      (.scss)    - Sass features, optimization  
   • SQL            (.sql)     - Query optimization, security
 
-📄 Data & Configuration:
+ Data & Configuration:
   • JSON           (.json)    - Structure validation, schema
   • XML            (.xml)     - Well-formed validation, XSD
   • YAML           (.yaml)    - Configuration analysis
   • TOML           (.toml)    - Configuration files
   • Markdown       (.md)      - Documentation, formatting
 
-🔧 Scripts & Tools:
+ Scripts & Tools:
   • Shell Scripts  (.sh)      - Bash/Zsh, best practices
   • Batch Files    (.bat)     - Windows batch scripting
   • PowerShell     (.ps1)     - PowerShell scripting
   • Makefile       (Makefile) - Build system optimization
 
-📝 Text Files:
+ Text Files:
   • Plain Text     (.txt)     - General text analysis
   • Config Files   (.conf)    - Configuration analysis
   • Log Files      (.log)     - Log pattern analysis
 
-🔄 Language-Specific Features:
+ Language-Specific Features:
 
 Python:           PEP compliance, type hints, context managers
 JavaScript:       ES6+, async/await, modern patterns  
@@ -406,11 +406,6 @@ Java:             OOP patterns, streams, lambda expressions
 C++:              RAII, smart pointers, templates
 Rust:             Ownership, lifetimes, trait bounds
 Go:               Idiomatic patterns, goroutines, interfaces
-
-🚀 Coming Soon:
-  • Dart, Flutter  • R, Julia     • Haskell, F#
-  • Assembly       • Dockerfile   • Terraform
-  • More frameworks and DSLs!
 """
     print(languages)
 
@@ -441,7 +436,7 @@ def handle_chat_mode(verbose: bool = False) -> None:
             user_input = input(prompt).strip()
             
             if user_input.lower() in ["exit", "quit", "q"]:
-                print("👋 Thanks for using Breeze! Goodbye!")
+                print(" Thanks for using Breeze! Goodbye!")
                 break
             elif user_input.lower() == "help":
                 print_chat_help()
@@ -458,12 +453,12 @@ def handle_chat_mode(verbose: bool = False) -> None:
             session_count += 1
             
             # Process the chat input
-            print("🤖 Processing..." if not verbose else "🤖 Analyzing your request...")
+            print("Processing..." if not verbose else "🤖 Analyzing your request...")
             result = orchestrator.process_chat_input(user_input, verbose=verbose)
             print(f"\n📋 Result:\n{result}\n")
             
         except KeyboardInterrupt:
-            print("\n\n👋 Thanks for using Breeze! Goodbye!")
+            print("\n\n Thanks for using Breeze! Goodbye!")
             break
         except Exception as e:
             session_count += 1
@@ -471,7 +466,7 @@ def handle_chat_mode(verbose: bool = False) -> None:
             if verbose:
                 import traceback
                 traceback.print_exc()
-            print("💡 Try 'help' for assistance or 'exit' to quit\n")
+            print(" Try 'help' for assistance or 'exit' to quit\n")
 
 
 def handle_chat_mode(verbose: bool = False) -> None:
@@ -545,27 +540,27 @@ def main() -> None:
     # Check for API key
     api_key = get_api_key()
     if not api_key:
-        print("❌ Error: GEMINI_API_KEY environment variable not set.")
-        print("\n🔑 Please set your Google AI API key:")
+        print(" Error: GEMINI_API_KEY environment variable not set.")
+        print("\n Please set your Google AI API key:")
         print("  Windows (CMD):      set GEMINI_API_KEY \"your_key_here\"")
         print("  Windows (PowerShell): $env:GEMINI_API_KEY=\"your_key_here\"")
         print("  Linux/macOS:        export GEMINI_API_KEY=your_key_here")
-        print("\n🌐 Get your API key at: https://ai.google.dev/")
-        print("📖 For detailed setup instructions, run: breeze --help")
+        print("\n Get your API key at: https://ai.google.dev/")
+        print(" For detailed setup instructions, run: breeze --help")
         sys.exit(1)
     
     # Validate API key format (basic check)
     if not api_key.startswith("AIza"):
-        print("⚠️  Warning: API key format may be incorrect (should start with 'AIza')")
+        print("  Warning: API key format may be incorrect (should start with 'AIza')")
     
     # Handle chat mode
     if args.command == "chat":
         try:
             handle_chat_mode(verbose=getattr(args, "verbose", False))
         except KeyboardInterrupt:
-            print("\n👋 Chat session interrupted. Goodbye!")
+            print("\n Chat session interrupted. Goodbye!")
         except Exception as e:
-            print(f"❌ Chat mode error: {e}")
+            print(f" Chat mode error: {e}")
             if getattr(args, "verbose", False):
                 import traceback
                 traceback.print_exc()
@@ -577,7 +572,7 @@ def main() -> None:
         
         # Check if file exists
         if not Path(path).exists():
-            print(f"❌ Error: File '{path}' does not exist.")
+            print(f" Error: File '{path}' does not exist.")
             
             # Provide helpful suggestions
             path_obj = Path(path)
@@ -594,25 +589,25 @@ def main() -> None:
                     pass
                 
                 if similar_files:
-                    print("💡 Did you mean one of these files?")
+                    print(" Did you mean one of these files?")
                     for similar_file in similar_files[:5]:  # Show max 5 suggestions
                         print(f"   {similar_file}")
             else:
-                print(f"💡 Directory '{parent_dir}' does not exist either.")
+                print(f" Directory '{parent_dir}' does not exist either.")
             
-            print(f"\n📁 Supported file types: .py .js .ts .java .cpp .c .cs .php .rb .go .rs .html .css .sql .json .xml .yaml .md .txt and more")
+            print(f"\n Supported file types: .py .js .ts .java .cpp .c .cs .php .rb .go .rs .html .css .sql .json .xml .yaml .md .txt and more")
             sys.exit(1)
         
         # Check if it's a file (not a directory)
         if not Path(path).is_file():
-            print(f"❌ Error: '{path}' is not a file.")
+            print(f" Error: '{path}' is not a file.")
             if Path(path).is_dir():
-                print("💡 This appears to be a directory. Please specify a file path.")
+                print(" This appears to be a directory. Please specify a file path.")
                 # Show some files in the directory
                 try:
                     files = [f for f in Path(path).iterdir() if f.is_file()]
                     if files:
-                        print("📁 Files in this directory:")
+                        print(" Files in this directory:")
                         for file in files[:10]:  # Show max 10 files
                             print(f"   {file.name}")
                         if len(files) > 10:
@@ -624,14 +619,14 @@ def main() -> None:
         # Get file type and show it if verbose
         file_type = get_file_type(path)
         if getattr(args, "verbose", False):
-            print(f"📄 Detected file type: {file_type}")
-            print(f"📏 File size: {Path(path).stat().st_size} bytes")
+            print(f" Detected file type: {file_type}")
+            print(f" File size: {Path(path).stat().st_size} bytes")
     
     # Validate command-specific requirements
     if hasattr(args, "target") and args.command == "migrate":
         if not args.target:
-            print("❌ Error: Migration target is required for migrate command.")
-            print("💡 Examples:")
+            print(" Error: Migration target is required for migrate command.")
+            print(" Examples:")
             print("   --target \"Python 3.12\"")
             print("   --target \"TypeScript\"") 
             print("   --target \"React\"")
@@ -640,13 +635,13 @@ def main() -> None:
     
     # Show operation info if verbose
     if getattr(args, "verbose", False):
-        print(f"🚀 Starting {args.command} operation...")
-        print(f"📂 File: {getattr(args, 'path', 'N/A')}")
-        print(f"📤 Output mode: {getattr(args, 'output', 'console')}")
+        print(f" Starting {args.command} operation...")
+        print(f" File: {getattr(args, 'path', 'N/A')}")
+        print(f" Output mode: {getattr(args, 'output', 'console')}")
         if hasattr(args, "target"):
-            print(f"🎯 Target: {getattr(args, 'target', 'N/A')}")
+            print(f" Target: {getattr(args, 'target', 'N/A')}")
         if getattr(args, "secure", False):
-            print("🛡️  Secure mode: User approval required for changes")
+            print("  Secure mode: User approval required for changes")
         print("-" * 50)
     
     # Create flow orchestrator and process command
@@ -674,43 +669,43 @@ def main() -> None:
             
             # Show success message for file operations
             if getattr(args, "output", "console") != "console":
-                print(f"\n✅ {args.command.title()} operation completed successfully")
+                print(f"\n {args.command.title()} operation completed successfully")
         else:
-            print("✅ Operation completed successfully (no output generated)")
+            print(" Operation completed successfully (no output generated)")
     
     except KeyboardInterrupt:
-        print(f"\n⏹️  {args.command.title()} operation interrupted by user")
+        print(f"\n  {args.command.title()} operation interrupted by user")
         sys.exit(1)
     
     except FileNotFoundError as e:
-        print(f"❌ File Error: {e}")
-        print("💡 Please check the file path and try again")
+        print(f" File Error: {e}")
+        print(" Please check the file path and try again")
         sys.exit(1)
     
     except PermissionError as e:
-        print(f"❌ Permission Error: {e}")
-        print("💡 Try running as administrator or check file permissions")
+        print(f" Permission Error: {e}")
+        print(" Try running as administrator or check file permissions")
         sys.exit(1)
     
     except ConnectionError as e:
-        print(f"❌ Connection Error: {e}")
-        print("💡 Please check your internet connection and API key")
-        print("🌐 Verify your API key at: https://ai.google.dev/")
+        print(f" Connection Error: {e}")
+        print(" Please check your internet connection and API key")
+        print(" Verify your API key at: https://ai.google.dev/")
         sys.exit(1)
     
     except Exception as e:
         error_type = type(e).__name__
-        print(f"❌ {error_type} during {args.command} operation:")
+        print(f" {error_type} during {args.command} operation:")
         
         # Show different levels of error detail based on verbose mode
         if getattr(args, "verbose", False):
             print(f"   Full error: {str(e)}")
-            print("\n📋 Full traceback:")
+            print("\n Full traceback:")
             import traceback
             traceback.print_exc()
         else:
             print(f"   {str(e)}")
-            print(f"\n💡 Use --verbose for detailed error information")
+            print(f"\n Use --verbose for detailed error information")
             print("🔧 Common solutions:")
             
             # Provide error-specific suggestions
@@ -742,8 +737,8 @@ def main() -> None:
 # Additional helper function for the main module
 def show_quick_help():
     """Show quick help without full argument parsing."""
-    print("🌬️  Breeze - AI-powered multi-language code assistant")
-    print("\n🚀 Quick Commands:")
+    print("  Breeze - AI-powered multi-language code assistant")
+    print("\n Quick Commands:")
     print("  breeze doc <file>           # Generate documentation")
     print("  breeze summarize <file>     # Summarize code") 
     print("  breeze test <file>          # Generate tests")
@@ -752,8 +747,8 @@ def show_quick_help():
     print("  breeze annotate <file>      # Add types")
     print("  breeze migrate <file> --target X  # Migrate code")
     print("  breeze chat                 # Interactive mode")
-    print("\n📖 For detailed help: breeze --help")
-    print("💬 For interactive help: breeze chat")
+    print("\n For detailed help: breeze --help")
+    print(" For interactive help: breeze chat")
 
 
 # Enhanced entry point check
@@ -761,11 +756,11 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n👋 Breeze interrupted. Goodbye!")
+        print("\n Breeze interrupted. Goodbye!")
         sys.exit(0)
     except Exception as e:
-        print(f"\n💥 Unexpected error: {e}")
-        print("🔧 Please report this issue if it persists")
+        print(f"\n Unexpected error: {e}")
+        print(" Please report this issue if it persists")
         sys.exit(1)
 
 
