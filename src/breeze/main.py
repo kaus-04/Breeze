@@ -412,13 +412,13 @@ Go:               Idiomatic patterns, goroutines, interfaces
 
 def handle_chat_mode(verbose: bool = False) -> None:
     """Enhanced chat mode handler with better UX."""
-    print("🌬️  Welcome to Breeze Interactive Mode!")
+    print("  Welcome to Breeze Interactive Mode!")
     print("AI-powered multi-language code assistant\n")
     
     if verbose:
-        print("🔧 Verbose mode enabled - detailed processing info will be shown")
+        print(" Verbose mode enabled - detailed processing info will be shown")
     
-    print("💡 Quick start:")
+    print(" Quick start:")
     print("  • Type 'help' for available commands")
     print("  • Type 'examples' for usage examples") 
     print("  • Type 'supported' for supported languages")
@@ -453,16 +453,16 @@ def handle_chat_mode(verbose: bool = False) -> None:
             session_count += 1
             
             # Process the chat input
-            print("Processing..." if not verbose else "🤖 Analyzing your request...")
+            print("Processing..." if not verbose else " Analyzing your request...")
             result = orchestrator.process_chat_input(user_input, verbose=verbose)
-            print(f"\n📋 Result:\n{result}\n")
+            print(f"\n Result:\n{result}\n")
             
         except KeyboardInterrupt:
             print("\n\n Thanks for using Breeze! Goodbye!")
             break
         except Exception as e:
             session_count += 1
-            print(f"\n❌ Error: {e}")
+            print(f"\n Error: {e}")
             if verbose:
                 import traceback
                 traceback.print_exc()
