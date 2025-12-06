@@ -65,7 +65,7 @@ Core Capabilities
 
 - **Model**: Use appropriate Gemini API key of your choice - Optimized for code understanding and generation
 - **Provider**: [Google AI for Developers](https://ai.google.dev/)
-- **Why Gemini?**: Cuz its free duh
+- **Why Gemini?**: Cuz its free :)
 
 ## 📦 Installation
 
